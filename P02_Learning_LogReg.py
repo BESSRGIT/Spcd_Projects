@@ -36,8 +36,8 @@ df_train['Age_complete'] = df_train['Age'].replace(np.nan, average_age)
 
 df_train['Gender'] = df_train['Sex'].replace(['female', 'male'], [1, 0])
 
-list_emb = ['C', 'Q', 'S', np.nan]
-list_emb_num = [1,2,3, 4]
+list_emb = [np.nan, 'C', 'Q', 'S']
+list_emb_num = [0,1,2,3]
 df_train['Embarked_num'] = df_train['Embarked'].replace(list_emb, list_emb_num)
 
 # Define y column for regression, i.e. in this case the column 'Survived'
