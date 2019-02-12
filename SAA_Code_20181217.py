@@ -62,6 +62,7 @@ for index, row in combined_set.iterrows():
 for index, row in combined_set.iterrows():
     dist =  sqrt(((blue_center_x - combined_set.loc[index][0])**2)   +  (blue_center_y - combined_set.loc[index][1])**2)
     distance_blue.append(dist)
+#    distance_red.append(dist)
 
 
 # Task 4: Relabelling points based on their distance to red_center and blue_center
