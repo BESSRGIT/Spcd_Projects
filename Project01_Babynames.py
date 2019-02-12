@@ -2,7 +2,7 @@
 """
 Created on Mon Jan  7 19:43:57 2019
 
-Spiced Academy Project-01: 
+Spiced Academy Project-01:
 Analyzing Babynames based on US dataset from 1880 - 2017
 
 @author: DataCoach
@@ -33,7 +33,7 @@ df = pd.concat(data, ignore_index = True)
 print(df.shape)
 
 # Generate dataframe for the year 2000
-df2000 = df[df['year'] == 2000] 
+df2000 = df[df['year'] == 2000]
 
 # Print the first 10 entries
 print(df2000.head(10))
@@ -75,7 +75,7 @@ df2000['percentage'] = df2000['count'] / sum_of_birth_2000 * 100
 
 # Verify that the sum of percentages is 100%.
 print(df2000['percentage'].sum())
-    
+
 # Calculate the percentage of the top 10 names on all births
 df2000_sorted = df2000.sort_values(by = 'count', ascending = False)
 df2000_top10 = df2000_sorted[0:10]['percentage'].sum()
@@ -102,7 +102,7 @@ Plot a time series
 # Extract all rows containing your name from the variable df
 #--------
 # As "my_name" contains only zeros, this part is skipped.
-# Alternative: Use a male-name that is close to "Bilgehan", such as "Billy" 
+# Alternative: Use a male-name that is close to "Bilgehan", such as "Billy"
 #--------
 df_Billy = df[(df['name'] == 'Billy') & (df['gender'] == 'M')]
 
@@ -171,7 +171,7 @@ plt.savefig(f'US Birthrate.png', dpi=600)
 """
 Normalize
 """
-# divide the number of births by the total number of births in that 
+# divide the number of births by the total number of births in that
 # year to obtain the relative frequency
 # plot the time series of your name or the celebrity names again.
 #--------
@@ -181,7 +181,7 @@ Normalize
 """
 Name diversity
 """
-# Have the baby names become more diverse over time? 
+# Have the baby names become more diverse over time?
 # What assumptions is your calculation based upon?
 name_div = df['name'].unique()
 #--------
@@ -212,6 +212,7 @@ df['first letter'] = first_letter
 
 # Count how many names start with ‘A’
 num_of_A = df[df['first letter'] == 'A']['first letter'].count()
+# num_of_B = df[df['first letter'] == 'B']['first letter'].count()
 #%%
 #--------
 # TO BE CONTINUED
